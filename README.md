@@ -7,12 +7,13 @@
 故 此项目诞生。  
 
 仅适用于MacOS系统  
-其它系统请自行生成证书和host  
+其它系统请自行生成证书和host，并下载caddy。  
 
 仅在 claude-3-7-sonnet-20250219 模型和 V3 API 测试通过。  
 其它供应商请自行修改源码。
 
 # 准备
+修改请求模型时需要的key。  
 修改Caddyfile，然后 `./caddy run`   
 npm install， 然后 `node index.js` 
 
