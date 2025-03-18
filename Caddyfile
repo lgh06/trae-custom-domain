@@ -4,6 +4,9 @@
 }
 
 api.anthropic.com {
+    log {
+		output file access.log
+	}
     tls anthropic.crt anthropic.key
     # rewrite * /v1{uri}
     reverse_proxy https://api.gpt.ge {
@@ -13,7 +16,5 @@ api.anthropic.com {
     }
     reverse_proxy /v1/models* http://localhost:3000 {
         header_up Host {upstream_hostport}
-        header_up anthropic-version "2023-06-01"
-        header_up x-api-key "sk-ITPqUV7M8ET1HyYZ7003A27491F145208d76BcCbEaDcDf1a"
     }    
 }
