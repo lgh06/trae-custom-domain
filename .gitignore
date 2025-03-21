@@ -25,3 +25,5 @@ Thumbs.db
 anthropic.crt
 anthropic.csr
 anthropic.key
+
+access.log
